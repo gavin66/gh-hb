@@ -159,18 +159,23 @@ class WechatController extends Controller
      *
      * @return mixed
      */
-//    public function menu()
-//    {
-//        $buttons = [
-//            [
-//                "type" => "view",
-//                "name" => "进入游戏",
-//                "url"  => 'http://test.hnqxs.com/game'
-//            ]
-//        ];
-//
-//        $officialAccount = EasyWeChat::officialAccount(); // 公众号
-//
-//        return $officialAccount->menu->create($buttons);
-//    }
+    public function menu()
+    {
+        $buttons = [
+            [
+                "type" => "view",
+                "name" => "进入游戏",
+                "url"  => 'http://test.hnqxs.com/game'
+            ],
+            [
+                "type" => "view",
+                "name" => "游戏2",
+                "url"  => 'http://wx.hnqxs.com/guohang-panda/'
+            ]
+        ];
+
+        $officialAccount = EasyWeChat::officialAccount(); // 公众号
+
+        return $officialAccount->menu->create($buttons);
+    }
 }

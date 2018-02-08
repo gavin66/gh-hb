@@ -42,4 +42,4 @@ Route::any('/github_hook', function (){
 });
 
 // 设置公众号菜单,没有用了
-//Route::get('/menu','WechatController@menu');
+Route::get('/menu','WechatController@menu');
