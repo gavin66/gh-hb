@@ -96,9 +96,9 @@
         <img src="img/logo.png" class="logo_img"/>
         <img src="img/active.png" class="active_img"/>
         <div class="head_div">
-            <img src="{{ $user->avatar }}" class="head_img"/>
+            <img src="" class="head_img"/>
         </div>
-        <p class="nickname">{{ $user->nickname }}</p>
+        <p class="nickname"></p>
         <div class="person_content">
             <img src="img/peson_title.png" class="person_title"/>
             <img src="img/p_title.png" class="p_title_img"/>
