@@ -15,22 +15,25 @@
 // 接收微信消息
 Route::any('/wechat', 'WechatController@serve');
 
+Route::get('/game', 'WechatController@game');
+
+
 // 授权,获取用户信息中间件
-Route::group(['middleware' => ['web', 'wechat.oauth:default,snsapi_userinfo']], function () {
-
-    // 开始游戏
-    Route::get('/game', 'WechatController@game');
-
-    // 总排行榜
-    Route::get('/rank_all','WechatController@rankAll');
-
-    // 个人排行榜
-    Route::get('/rank','WechatController@rank');
-
-    // 保存排行榜
-    Route::post('/rank','WechatController@rankStore');
-
-});
+//Route::group(['middleware' => ['web', 'wechat.oauth:default,snsapi_userinfo']], function () {
+//
+//    // 开始游戏
+//    Route::get('/game', 'WechatController@game');
+//
+//    // 总排行榜
+//    Route::get('/rank_all','WechatController@rankAll');
+//
+//    // 个人排行榜
+//    Route::get('/rank','WechatController@rank');
+//
+//    // 保存排行榜
+//    Route::post('/rank','WechatController@rankStore');
+//
+//});
 
 // github 钩子
 Route::any('/github_hook', function (){

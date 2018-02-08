@@ -68,27 +68,28 @@ class WechatController extends Controller
      */
     public function game()
     {
-        $userData = session('wechat.oauth_user.default'); // 拿到授权用户资料
+//        $userData = session('wechat.oauth_user.default'); // 拿到授权用户资料
 
         // 新增一个新用户
-        try {
-            $user = User::findOrFail($userData['id']);
-        } catch ( ModelNotFoundException $exception ) {
-            $user = new User;
-            $user->openid = $userData['id'];
-            $user->name = $userData['name'];
-            $user->nickname = $userData['nickname'];
-            $user->avatar = $userData['avatar'];
-            $user->city = $userData['original']['city'];
-            $user->province = $userData['original']['province'];
-            $user->country = $userData['original']['country'];
-            $user->original = json_encode($userData['original']);
-            $isSuccess = $user->save();
-        }
+//        try {
+//            $user = User::findOrFail($userData['id']);
+//        } catch ( ModelNotFoundException $exception ) {
+//            $user = new User;
+//            $user->openid = $userData['id'];
+//            $user->name = $userData['name'];
+//            $user->nickname = $userData['nickname'];
+//            $user->avatar = $userData['avatar'];
+//            $user->city = $userData['original']['city'];
+//            $user->province = $userData['original']['province'];
+//            $user->country = $userData['original']['country'];
+//            $user->original = json_encode($userData['original']);
+//            $isSuccess = $user->save();
+//        }
 
 
         // 返回游戏 blade
-        return view('game', [ 'user' => $user, 'app' => EasyWeChat::officialAccount() ]);
+//        return view('game', [ 'user' => $user, 'app' => EasyWeChat::officialAccount() ]);
+        return view('game');
     }
 
     /**
