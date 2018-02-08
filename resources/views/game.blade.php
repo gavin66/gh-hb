@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <link rel="stylesheet" type="text/css" href="font/Arial.css"/>
-    <link rel="stylesheet" type="text/css" href="css/ani.css"/>
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="font/Arial.css?{{ $release }}"/>
+    <link rel="stylesheet" type="text/css" href="css/ani.css?{{ $release }}"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css?{{ $release }}"/>
     <title>胖安达抢红包大战</title>
 </head>
 <script type="text/javascript">
@@ -15,15 +15,15 @@
 </script>
 <body>
 <div id="container">
-    <audio src="media/bg.mp3" id="audio" loop="loop"></audio>
-    <audio src="media/1.mp3" id="audio1"></audio>
-    <audio src="media/2.mp3" id="audio2"></audio>
-    <audio src="media/3.mp3" id="audio3"></audio>
+    <audio src="media/bg.mp3?{{ $release }}" id="audio" loop="loop"></audio>
+    <audio src="media/1.mp3?{{ $release }}" id="audio1"></audio>
+    <audio src="media/2.mp3?{{ $release }}" id="audio2"></audio>
+    <audio src="media/3.mp3?{{ $release }}" id="audio3"></audio>
     <div class="loading_div">
         <div class="loading_content">
             <div class="load_panda_div">
-                <img src="img/load_panda.png" class="load_panda_img"/>
-                <img src="img/load_panda_1.png" class="load_panda_img"/>
+                <img src="img/load_panda.png?{{ $release }}" class="load_panda_img"/>
+                <img src="img/load_panda_1.png?{{ $release }}" class="load_panda_img"/>
             </div>
             <div class="loading_out">
                 <div class="loading_in">
@@ -37,17 +37,17 @@
     </div>
 
     <div class="kv_div">
-        <img src="img/icon1.png" class="icon1"/>
-        <img src="img/icon2.png" class="icon2"/>
-        <img src="img/icon3.png" class="icon3"/>
-        <img src="img/icon4.png" class="icon4"/>
-        <img src="img/icon5.png" class="icon5"/>
-        <img src="img/icon6.png" class="icon6"/>
-        <img src="img/logo.png" class="logo_img"/>
-        <img src="img/active.png" class="active_img"/>
-        <img src="img/title.png" class="title_img"/>
-        <img src="img/panda_kv.png" class="panda_kv_img"/>
-        <img src="img/start.png" class="start_btn"/>
+        <img src="img/icon1.png?{{ $release }}" class="icon1"/>
+        <img src="img/icon2.png?{{ $release }}" class="icon2"/>
+        <img src="img/icon3.png?{{ $release }}" class="icon3"/>
+        <img src="img/icon4.png?{{ $release }}" class="icon4"/>
+        <img src="img/icon5.png?{{ $release }}" class="icon5"/>
+        <img src="img/icon6.png?{{ $release }}" class="icon6"/>
+        <img src="img/logo.png?{{ $release }}" class="logo_img"/>
+        <img src="img/active.png?{{ $release }}" class="active_img"/>
+        <img src="img/title.png?{{ $release }}" class="title_img"/>
+        <img src="img/panda_kv.png?{{ $release }}" class="panda_kv_img"/>
+        <img src="img/start.png?{{ $release }}" class="start_btn"/>
 
     </div>
     <!--游戏页-->
@@ -62,46 +62,46 @@
             <p class="mark_num">0</p>
         </div>
 
-        <div class="arrow_left arrow_btn"><img src="img/left_arrow.png"/><div class="touch_div_left"></div></div>
-        <div class="arrow_right arrow_btn"><img src="img/right_arrow.png"/><div class="touch_div_right"></div></div>
+        <div class="arrow_left arrow_btn"><img src="img/left_arrow.png?{{ $release }}"/><div class="touch_div_left"></div></div>
+        <div class="arrow_right arrow_btn"><img src="img/right_arrow.png?{{ $release }}"/><div class="touch_div_right"></div></div>
         <div class="play_content">
             <div class="panda_div">
-                <img src="img/play_img/panda.png" class="panda_img"/>
-                <img src="img/panda_1.png" class="panda_img"/>
+                <img src="img/play_img/panda.png?{{ $release }}" class="panda_img"/>
+                <img src="img/panda_1.png?{{ $release }}" class="panda_img"/>
             </div>
-            <img src="img/people.png" class="people_1 people_1_ani"/>
-            <img src="img/people2.png" class="people_2 people_2_ani"/>
-            <img src="img/people3.png" class="people_3 people_3_ani"/>
-            <img src="img/red_pack_1.png" class="game_items pack_b"/>
+            <img src="img/people.png?{{ $release }}" class="people_1 people_1_ani"/>
+            <img src="img/people2.png?{{ $release }}" class="people_2 people_2_ani"/>
+            <img src="img/people3.png?{{ $release }}" class="people_3 people_3_ani"/>
+            <img src="img/red_pack_1.png?{{ $release }}" class="game_items pack_b"/>
         </div>
     </div>
 
     <!--结果页-->
     <div class="result_div">
-        <img src="img/mark_word.png" class="mark_img"/>
+        <img src="img/mark_word.png?{{ $release }}" class="mark_img"/>
         <div class="mark_pack_box">
-            <img src="img/mark_pack.png"/>
+            <img src="img/mark_pack.png?{{ $release }}"/>
             <p class="end_mark">999</p>
         </div>
-        <img src="img/again_btn.png" class="again_btn"/>
+        <img src="img/again_btn.png?{{ $release }}" class="again_btn"/>
         <!--<div class="btn_div">
             <img src="img/person_center.png" class="person_img"/>
             <img src="img/ranking.png" class="ranking_img ranking_btn"/>
         </div>-->
-        <img src="img/share_btn.png" class="share_btn share_click"/>
+        <img src="img/share_btn.png?{{ $release }}" class="share_btn share_click"/>
     </div>
 
     <!--个人中心-->
     <div class="person_div">
-        <img src="img/logo.png" class="logo_img"/>
-        <img src="img/active.png" class="active_img"/>
+        <img src="img/logo.png?{{ $release }}" class="logo_img"/>
+        <img src="img/active.png?{{ $release }}" class="active_img"/>
         <div class="head_div">
             <img src="" class="head_img"/>
         </div>
         <p class="nickname"></p>
         <div class="person_content">
-            <img src="img/peson_title.png" class="person_title"/>
-            <img src="img/p_title.png" class="p_title_img"/>
+            <img src="img/peson_title.png?{{ $release }}" class="person_title"/>
+            <img src="img/p_title.png?{{ $release }}" class="p_title_img"/>
             <!--<div class="mark_item">
                 <p class="order">1</p>
                 <p class="mark_number">999</p>
@@ -128,24 +128,24 @@
             <img src="img/ranking.png" class="ranking_img_2 ranking_btn"/>
             <img src="img/gohome.png" class="gohome_img"/>
         </div>-->
-        <img src="img/share_btn.png" class="share_btn_1 share_click"/>
+        <img src="img/share_btn.png?{{ $release }}" class="share_btn_1 share_click"/>
     </div>
 
     <!--排行榜-->
     <div class="ranking_div">
-        <img src="img/logo.png" class="logo_img"/>
-        <img src="img/active.png" class="active_img"/>
+        <img src="img/logo.png?{{ $release }}" class="logo_img"/>
+        <img src="img/active.png?{{ $release }}" class="active_img"/>
         <div class="ranking_content">
-            <img src="img/rank_title.png" class="rank_title"/>
-            <img src="img/ranking_img.png" class="rank_img_img"/>
+            <img src="img/rank_title.png?{{ $release }}" class="rank_title"/>
+            <img src="img/ranking_img.png?{{ $release }}" class="rank_img_img"/>
             <div class="ranking_name">
 
             </div>
 
         </div>
         <div class="btn_group_1">
-            <img src="img/gohome.png" class="gohome_img_1"/>
-            <img src="img/person_center.png" class="person_img_end"/>
+            <img src="img/gohome.png?{{ $release }}" class="gohome_img_1"/>
+            <img src="img/person_center.png?{{ $release }}" class="person_img_end"/>
         </div>
     </div>
 
@@ -154,14 +154,14 @@
     <!--说明-->
     <div class="word_div">
         <div class="word_content">
-            <img src="img/x.png" class="close_img"/>
-            <img src="img/word.png" class="word_img"/>
+            <img src="img/x.png?{{ $release }}" class="close_img"/>
+            <img src="img/word.png?{{ $release }}" class="word_img"/>
         </div>
     </div>
 
     <!--分享浮层-->
     <div class="share_div">
-        <img src="img/share_icon.png" class="share_icon"/>
+        <img src="img/share_icon.png?{{ $release }}" class="share_icon"/>
     </div>
 
 </div>
@@ -207,8 +207,8 @@
   });
 </script>
 <script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/catPlug.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/catPlug.js?{{ $release }}" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js?{{ $release }}" type="text/javascript" charset="utf-8"></script>
 <script>
   var _hmt = _hmt || [];
   (function() {
