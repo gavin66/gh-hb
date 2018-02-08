@@ -89,7 +89,7 @@ class WechatController extends Controller
 
         // 返回游戏 blade
 //        return view('game', [ 'user' => $user, 'app' => EasyWeChat::officialAccount() ]);
-        return view('game');
+        return view('game', [ 'app' => EasyWeChat::officialAccount() ]);
     }
 
     /**
