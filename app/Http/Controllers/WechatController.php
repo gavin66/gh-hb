@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use EasyWeChat;
-use App\User;
-use App\Rank;
-use App\RankAll;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Http\Request;
+//use App\User;
+//use App\Rank;
+//use App\RankAll;
+//use Illuminate\Database\Eloquent\ModelNotFoundException;
+//use Illuminate\Http\Request;
 
 class WechatController extends Controller
 {
-    private $jsonStru = [
-        'code' => 0,
-        'msg'  => '',
-        'data' => [],
-    ];
+//    private $jsonStru = [
+//        'code' => 0,
+//        'msg'  => '',
+//        'data' => [],
+//    ];
 
     /**
      * 处理微信的请求消息
@@ -95,28 +95,28 @@ class WechatController extends Controller
     /**
      * 总排行榜
      */
-    public function rankAll()
-    {
-        $rankAll = RankAll::select('score', 'nickname')->orderBy('score', 'desc')->limit(10)->get();
-
-        return response()->json($rankAll);
-    }
+//    public function rankAll()
+//    {
+//        $rankAll = RankAll::select('score', 'nickname')->orderBy('score', 'desc')->limit(10)->get();
+//
+//        return response()->json($rankAll);
+//    }
 
     /**
      * 个人排行榜
      *
      * @return string
      */
-    public function rank()
-    {
-        $userData = session('wechat.oauth_user.default'); // 拿到授权用户资料
-
-        $rank = Rank::select('score')->where('openid', $userData['id'])->orderBy('score', 'desc')->limit(10)->get();
-
-//        $rank = Rank::select('score')->where('openid',$userData['id'])->get();
-
-        return response()->json($rank);
-    }
+//    public function rank()
+//    {
+//        $userData = session('wechat.oauth_user.default'); // 拿到授权用户资料
+//
+//        $rank = Rank::select('score')->where('openid', $userData['id'])->orderBy('score', 'desc')->limit(10)->get();
+//
+////        $rank = Rank::select('score')->where('openid',$userData['id'])->get();
+//
+//        return response()->json($rank);
+//    }
 
     /**
      * 保存个人得分记录
@@ -125,52 +125,52 @@ class WechatController extends Controller
      *
      * @return string
      */
-    public function rankStore( Request $request )
-    {
-        // 返回 blade
-        if ( $request->has('score') == false ) {
-            $re = $this->jsonStru;
-            $re['code'] = 1;
-            $re['msg'] = '分数未上传';
-
-            return response()->json($re);
-        }
-
-        $userData = session('wechat.oauth_user.default'); // 拿到授权用户资料
-
-        $rank = new Rank;
-        $rank->openid = $userData['id'];
-        $rank->score = intval($request->input('score'));
-        $isSuccess = $rank->save();
-
-        if ( $isSuccess == false ) {
-            $re = $this->jsonStru;
-            $re['code'] = 1;
-            $re['msg'] = '未知错误';
-
-            return response()->json($re);
-        }
-
-        return response()->json($this->jsonStru);
-    }
+//    public function rankStore( Request $request )
+//    {
+//        // 返回 blade
+//        if ( $request->has('score') == false ) {
+//            $re = $this->jsonStru;
+//            $re['code'] = 1;
+//            $re['msg'] = '分数未上传';
+//
+//            return response()->json($re);
+//        }
+//
+//        $userData = session('wechat.oauth_user.default'); // 拿到授权用户资料
+//
+//        $rank = new Rank;
+//        $rank->openid = $userData['id'];
+//        $rank->score = intval($request->input('score'));
+//        $isSuccess = $rank->save();
+//
+//        if ( $isSuccess == false ) {
+//            $re = $this->jsonStru;
+//            $re['code'] = 1;
+//            $re['msg'] = '未知错误';
+//
+//            return response()->json($re);
+//        }
+//
+//        return response()->json($this->jsonStru);
+//    }
 
     /**
      * 微信公众号菜单
      *
      * @return mixed
      */
-    public function menu()
-    {
-        $buttons = [
-            [
-                "type" => "view",
-                "name" => "进入游戏",
-                "url"  => 'http://test.hnqxs.com/game'
-            ]
-        ];
-
-        $officialAccount = EasyWeChat::officialAccount(); // 公众号
-
-        return $officialAccount->menu->create($buttons);
-    }
+//    public function menu()
+//    {
+//        $buttons = [
+//            [
+//                "type" => "view",
+//                "name" => "进入游戏",
+//                "url"  => 'http://test.hnqxs.com/game'
+//            ]
+//        ];
+//
+//        $officialAccount = EasyWeChat::officialAccount(); // 公众号
+//
+//        return $officialAccount->menu->create($buttons);
+//    }
 }

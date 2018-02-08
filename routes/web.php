@@ -13,7 +13,7 @@
 
 
 // 接收微信消息
-Route::any('/wechat', 'WechatController@serve');
+//Route::any('/wechat', 'WechatController@serve');
 
 Route::get('/game', 'WechatController@game');
 
